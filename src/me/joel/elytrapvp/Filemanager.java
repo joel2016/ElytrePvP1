@@ -1,4 +1,4 @@
-package me.joel.elytrepvp;
+package me.joel.elytrapvp;
 
 import java.io.File;
 import java.io.IOException;

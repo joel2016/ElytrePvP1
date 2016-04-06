@@ -1,4 +1,4 @@
-package me.joel.elytrepvp;
+package me.joel.elytrapvp;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

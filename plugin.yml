@@ -1,13 +1,35 @@
-name: ElytrePvP
-version: 0.0.1
-author: Jp_hunter05
-
-main: me.joel.elytrepvp
-
+name: ElytraPVP
+prefix: EPVP
+version: 1.0.0
+description: Fight with elytra
+author: jp_hunter05
+authors:
+- BukkitPVP
+- jp_hunter05
+website: http://bukkitpvp.de/
+main: me.joel.elytrapvp.Main
+softdepend:
+- PointsAPI
 commands:
-  join:
-   description: joine das Spiel
-   usage: /<command>
-  help:
-   description: joine das Spiel
-   usage: /<command>
+  elytrapvp:
+    description: Main command ElytraPVP
+    aliases:
+    - elytra
+    - epvp
+    usage: Syntax error! Simply type /<command> to get help
+permissions:
+  elytra.*:
+    description: Gives access to all Elytra commands
+    children:
+      elytra.admin: true
+      elytra.staff: true
+      elytra.player: true
+  elytra.admin:
+    description: Allows to setup a game
+    default: true
+  elytra.staff:
+    description: Allows to manage a game
+    default: true
+  elytra.player:
+    description: Allows to play a game
+    default: true
