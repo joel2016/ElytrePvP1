@@ -1,0 +1,13 @@
+name: ElytrePvP
+version: 0.0.1
+author: Jp_hunter05
+
+main: me.joel.elytrepvp
+
+commands:
+  join:
+   description: joine das Spiel
+   usage: /<command>
+  help:
+   description: joine das Spiel
+   usage: /<command>
