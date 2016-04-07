@@ -23,42 +23,42 @@ public class Game {
 	}
 
 	public void join(Player p) {
-		//TODO Spieler tritt dem Spiel bei
+		// TODO Spieler tritt dem Spiel bei
 	}
-	
-	public void giveLobbyItems(Player p){
-		//TODO Gibt dem Spieler alle Lobby-Items
+
+	public void giveLobbyItems(Player p) {
+		// TODO Gibt dem Spieler alle Lobby-Items
 	}
 
 	public void leave(Player p) {
-		//TODO Spieler verlässt das Spiel
+		// TODO Spieler verlässt das Spiel
 	}
 
-	public void stop(){
-		//TODO Stoppt das Spiel
+	public void stop() {
+		// TODO Stoppt das Spiel
 	}
-	
-	public void reset(){
-		//TODO Setzt alle ArrayListen und geschossene Projektile zurück
+
+	public void reset() {
+		// TODO Setzt alle ArrayListen und geschossene Projektile zurück
 	}
-	
+
 	public void dead(Player p) {
-		//TODO wird aufgerufen, wenn ein Spieler stirbt
+		// TODO wird aufgerufen, wenn ein Spieler stirbt
 	}
-	
-	public void setHolo(Location loc){
+
+	public void setHolo(Location loc) {
 		setLocation(loc, "holo");
 	}
-	
-	public Location getHolo(){
+
+	public Location getHolo() {
 		return getLocation("holo");
 	}
-	
+
 	public void setLobby(Location loc) {
 		setLocation(loc, "lobby");
 	}
-	
-	public Location getLobby(){
+
+	public Location getLobby() {
 		return getLocation("lobby");
 	}
 
@@ -68,6 +68,10 @@ public class Game {
 
 	public Location getLocation(String key) {
 		return null; // TODO Holen der Location aus der cfg
+	}
+
+	public String getName() {
+		return name;
 	}
 
 	public static ArrayList<Player> player;

@@ -15,6 +15,9 @@ public class German implements Language {
 	public void setup() {
 		// Other
 		msg.put("automatic", "Automatisch");
+		// SETUP
+		msg.put("where", "Wo bin ich?");
+		msg.put("back", "Zurück");
 		// Messages to console
 		msg.put("error", "&4Ein Fehler ist aufgetreten: %r%v");
 		// Points

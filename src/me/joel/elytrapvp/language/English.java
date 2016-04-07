@@ -15,6 +15,9 @@ public class English implements Language {
 	public void setup() {
 		// Other
 		msg.put("automatic", "Automatic");
+		// SETUP
+		msg.put("back", "Back");
+		msg.put("where", "Where am I?");
 		// Messages to console
 		msg.put("error", "&4An error occurred: %r%v");
 		// Points
