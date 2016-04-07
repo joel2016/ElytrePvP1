@@ -10,6 +10,7 @@ website: http://bukkitpvp.de/
 main: me.joel.elytrapvp.Main
 softdepend:
 - PointsAPI
+- VIPHide
 commands:
   elytrapvp:
     description: Main command ElytraPVP
