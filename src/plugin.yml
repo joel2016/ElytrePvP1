@@ -2,7 +2,6 @@ name: ElytraPVP
 prefix: EPVP
 version: 1.0.0
 description: Fight with elytra
-author: jp_hunter05
 authors:
 - BukkitPVP
 - jp_hunter05
@@ -18,6 +17,7 @@ commands:
     - elytra
     - epvp
     usage: Syntax error! Simply type /<command> to get help
+    usage: Syntax error! Simply type /<command> to get help    
 permissions:
   elytra.*:
     description: Gives access to all Elytra commands

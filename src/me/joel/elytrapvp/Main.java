@@ -29,7 +29,8 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		prefix = "§2[§cElytraPVP§2] " + Messages.d;
 		plugin = this;
-		getCommand("help").setExecutor(new Commands());
+		getCommand("elytrapvp").setExecutor(new Commands());
+		Config.load();
 		setupSQL();
 	}
 

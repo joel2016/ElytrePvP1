@@ -30,6 +30,17 @@ public class German implements Language {
 		msg.put("h_kd", "§7K/D: §c%v");
 		msg.put("h_played", "§7Gespielte Spiele: §c%v");
 		msg.put("h_wins", "§7Gewonnene Spiele: §c%v");
+		msg.put("stats", "§7Stats §6<rechts klick>");
+		msg.put("join", "§7Joine das Spiel");
+		msg.put("leave", "§7Leave das Spiel");
+		msg.put("spawns", "§7Sete sie Spawns");
+		msg.put("create", "§7Erschaffe ein Spiel");
+		msg.put("i_stats", "§7Sehe deine stats");
+		msg.put("vote", "§7Vote für Maps");
+		msg.put("l_back", "§7Zurück"); //Lobby verlassen 
+		msg.put("permi", "§7Du hast keine Permission für diesen Command"); 
+		msg.put("s_join", "§5%v ist dem Spiel beigetreten"); 
+		msg.put("s_leave", "§5%v hat das Spiel verlassen"); 
 	}
 
 	public HashMap<String, String> getList(Player p) {
