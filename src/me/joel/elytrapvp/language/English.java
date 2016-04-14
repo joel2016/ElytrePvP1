@@ -36,10 +36,10 @@ public class English implements Language {
 		msg.put("create", "§7Create the game");
 		msg.put("stats", "§7See your Stats");
 		msg.put("vote", "§7Vote for the game");
-		msg.put("l_back", "§7Back"); //Lobby verlassen 
-		msg.put("permi", "§7You have not Permission for this Command"); 
-		msg.put("s_join", "§5%v joint the game"); 
-		msg.put("s_leave", "§5%v leavt the game"); 
+		msg.put("l_back", "§7Back");
+		msg.put("permi", "§7You don't have permissions for this command!"); 
+		msg.put("s_join", "§5%v joined the game"); 
+		msg.put("s_leave", "§5%v left the game"); 
 	}
 
 	public HashMap<String, String> getList(Player p) {

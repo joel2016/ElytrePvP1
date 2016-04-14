@@ -21,8 +21,7 @@ public class SimpleConfig {
 	private FileConfiguration config;
 
 	@SuppressWarnings("deprecation")
-	public SimpleConfig(InputStream configStream, File configFile,
-			int comments, JavaPlugin plugin) {
+	public SimpleConfig(InputStream configStream, File configFile, int comments, JavaPlugin plugin) {
 		this.comments = comments;
 		this.manager = new SimpleConfigManager(plugin);
 
@@ -105,8 +104,7 @@ public class SimpleConfig {
 
 	public void set(String path, Object value, String comment) {
 		if (!this.config.contains(path)) {
-			this.config.set(manager.getPluginName() + "_COMMENT_" + comments,
-					" " + comment);
+			this.config.set(manager.getPluginName() + "_COMMENT_" + comments, " " + comment);
 			comments++;
 		}
 
@@ -120,8 +118,7 @@ public class SimpleConfig {
 		for (String comm : comment) {
 
 			if (!this.config.contains(path)) {
-				this.config.set(manager.getPluginName() + "_COMMENT_"
-						+ comments, " " + comm);
+				this.config.set(manager.getPluginName() + "_COMMENT_" + comments, " " + comm);
 				comments++;
 			}
 
@@ -139,12 +136,10 @@ public class SimpleConfig {
 
 	@SuppressWarnings("deprecation")
 	public void reloadConfig() {
-		this.config = YamlConfiguration.loadConfiguration(manager
-				.getConfigContent(file));
+		this.config = YamlConfiguration.loadConfiguration(manager.getConfigContent(file));
 	}
 
-	public void save(File file) throws FileNotFoundException, IOException,
-			InvalidConfigurationException {
+	public void save(File file) throws FileNotFoundException, IOException, InvalidConfigurationException {
 		this.config.load(file);
 		saveConfig();
 	}

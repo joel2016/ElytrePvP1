@@ -7,7 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class ItemCreator {
-	
+
 	public static ItemStack CreateItemwithID(int id, int subid, int amount, String DisplayName,
 			ArrayList<String> lore) {
 

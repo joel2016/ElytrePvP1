@@ -25,8 +25,6 @@ public class Game {
 	private boolean stop;
 	private GameState state;
 
-	
-	
 	public Game(String name) {
 		this.name = name;
 		this.plugin = Main.plugin;
@@ -34,21 +32,21 @@ public class Game {
 		player = new ArrayList<>();
 	}
 
-
 	public void join(Player p) {
 		player.add(p);
 	}
 
 	public void giveLobbyItems(Player p) {
 		ItemStack back = ItemCreator.CreateItemwithID(378, 1, 0, Messages.msg(p, "l_back", p.getName()), null);
-		
+
 		ItemStack stats = ItemCreator.CreateItemwithID(378, 1, 0, Messages.msg(p, "i_stats", p.getName()), null);
-		
-		if(player.contains(p)){
-		p.getInventory().setItem(1, back);
-		p.getInventory().setItem(8, stats);
+
+		if (player.contains(p)) {
+			p.getInventory().setItem(1, back);
+			p.getInventory().setItem(8, stats);
 		}
 	}
+
 	public void leave(Player p) {
 		player.remove(p);
 	}
@@ -94,48 +92,46 @@ public class Game {
 
 	public static ArrayList<Player> player;
 
-public void startWaiting() { 
-    this.start = false;
-    this.stop = false;
-    this.state = GameState.STARTING;
-    new BukkitRunnable() {
-      int counter = 60;
+	public void startWaiting() {
+		this.start = false;
+		this.stop = false;
+		this.state = GameState.STARTING;
+		new BukkitRunnable() {
+			int counter = 60;
 
-      public void run() {
-        if ((Game.this.getPlayers().size() < 2) || (Game.this.stop)) {
-          for (Player p : Game.this.getPlayers()) {
-            p.setLevel(0);
-          }
-          cancel();
-        }
-        if (Game.this.start) {
-          Game.this.start = false;
-          this.counter = 5;
-        }
-        for (Player p : Game.this.getPlayers()) {
-          p.setLevel(this.counter);
-          if (this.counter <= 3) {
-            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 20.0F, 20.0F);
-          }
-        }
-        if (this.counter <= 0) {
-          Game.this.startWaiting();
-          cancel();
-        }
-        this.counter -= 1;
-      }
-    }
-    .runTaskTimer(this.plugin, 20L, 20L);
-  }
+			public void run() {
+				if ((Game.this.getPlayers().size() < 2) || (Game.this.stop)) {
+					for (Player p : Game.this.getPlayers()) {
+						p.setLevel(0);
+					}
+					cancel();
+				}
+				if (Game.this.start) {
+					Game.this.start = false;
+					this.counter = 5;
+				}
+				for (Player p : Game.this.getPlayers()) {
+					p.setLevel(this.counter);
+					if (this.counter <= 3) {
+						p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 20.0F, 20.0F);
+					}
+				}
+				if (this.counter <= 0) {
+					Game.this.startWaiting();
+					cancel();
+				}
+				this.counter -= 1;
+			}
+		}.runTaskTimer(this.plugin, 20L, 20L);
+	}
 
+	protected ArrayList<Player> getPlayers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-protected ArrayList<Player> getPlayers() {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-public void forceStart() {
-    this.start = true;
-  }
+	public void forceStart() {
+		this.start = true;
+	}
 
 }

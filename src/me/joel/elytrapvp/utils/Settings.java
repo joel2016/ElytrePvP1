@@ -49,8 +49,7 @@ public class Settings {
 	private static String getValue(Player p, String key) {
 		String s = "";
 		String playerid = p.getUniqueId().toString();
-		String SQL = "SELECT Value FROM ep_settings WHERE Player_ID='"
-				+ playerid + "' AND Setting='" + key + "'";
+		String SQL = "SELECT Value FROM ep_settings WHERE Player_ID='" + playerid + "' AND Setting='" + key + "'";
 		if (sql.checkConnection())
 			sql.openConnection();
 		Connection conn = sql.getConnection();
@@ -73,12 +72,11 @@ public class Settings {
 		String playerid = p.getUniqueId().toString();
 		String SQL = "";
 		if (getValue(p, key).equals(""))
-			SQL = "INSERT INTO ep_settings (Player_ID,Setting,Value) VALUES('"
-					+ playerid + "','" + key + "','" + value + "')";
+			SQL = "INSERT INTO ep_settings (Player_ID,Setting,Value) VALUES('" + playerid + "','" + key + "','" + value
+					+ "')";
 		else
-			SQL = "UPDATE ep_settings SET Value='" + value
-					+ "' WHERE Player_ID='" + playerid + "' AND Setting='"
-					+ key + "'";
+			SQL = "UPDATE ep_settings SET Value='" + value + "' WHERE Player_ID='" + playerid + "' AND Setting='" + key
+					+ "'";
 		sql.updateSQL(SQL);
 	}
 

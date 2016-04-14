@@ -34,8 +34,7 @@ public class BlockLogger {
 
 	@Override
 	public String toString() {
-		return "[" + m.toString() + "] (" + data + ") at " + loc.getBlockX()
-				+ "," + loc.getBlockY() + "," + loc.getBlockZ() + " in "
-				+ loc.getWorld().getName();
+		return "[" + m.toString() + "] (" + data + ") at " + loc.getBlockX() + "," + loc.getBlockY() + ","
+				+ loc.getBlockZ() + " in " + loc.getWorld().getName();
 	}
 }
