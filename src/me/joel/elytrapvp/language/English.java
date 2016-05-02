@@ -28,18 +28,7 @@ public class English implements Language {
 		msg.put("h_deaths", "§7Deaths: §c%v");
 		msg.put("h_kd", "§7K/D: §c%v");
 		msg.put("h_played", "§7Played games: §c%v");
-		msg.put("h_wins", "§7Games Won: §c%v");
-		msg.put("stats", "§7Stats §6<right-click>");
-		msg.put("join", "§7Join the game");
-		msg.put("leave", "§7Leave the game");
-		msg.put("spawns", "§7Set the spawns");
-		msg.put("create", "§7Create the game");
-		msg.put("stats", "§7See your Stats");
-		msg.put("vote", "§7Vote for the game");
-		msg.put("l_back", "§7Back");
-		msg.put("permi", "§7You don't have permissions for this command!"); 
-		msg.put("s_join", "§5%v joined the game"); 
-		msg.put("s_leave", "§5%v left the game"); 
+		msg.put("h_wins", "§7Won games: §c%v");
 	}
 
 	public HashMap<String, String> getList(Player p) {

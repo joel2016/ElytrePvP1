@@ -1,0 +1,11 @@
+name: ElytrenPvP
+version: 0.0.1
+author: jp_hunter05
+
+main: me.jp_hunter05.elytrenpvp.Main
+
+commands:
+  help:
+   description:
+   usage: /<command>
+   aliases: [ep.help ,helpen]
